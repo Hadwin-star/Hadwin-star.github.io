@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>东海水晶市场发展调研报告 | AI赋能产业转型升级</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #f5f5dc;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --text-muted: #6b7280;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .toc-sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 280px;
+            background: rgba(30, 58, 138, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .crystal-bg {
+            background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .toc-item {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            color: white;
+            padding-left: 0.5rem;
+        }
+        
+        .toc-item.active {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .citation {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .citation:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+        
+        .pull-quote {
+            border-left: 4px solid var(--accent);
+            background: rgba(59, 130, 246, 0.05);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .stat-highlight {
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 30px 0;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-small {
+            height: 250px;
+        }
+        
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
+
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid-control-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+        
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon {
+            fill: #f8fafc !important;
+            stroke: #1e3a8a !important;
+            stroke-width: 2px !important;
+            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) !important;
+        }
+        
+        .mermaid .node .label {
+            color: #1f2937 !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        
+        .mermaid .edgePath .path {
+            stroke: #6b7280 !important;
+            stroke-width: 2px !important;
+            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1)) !important;
+        }
+        
+        .mermaid .edgeLabel {
+            background-color: white !important;
+            color: #374151 !important;
+            font-weight: 500 !important;
+            font-family: 'Inter', sans-serif !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 6px !important;
+            padding: 4px 8px !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        @media (max-width: 1024px) {
+            .toc-sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+                text-wrap: balance;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                text-wrap: balance;
+            }
+            
+            .grid-cols-2, 
+            .grid-cols-3, 
+            .grid-cols-4 {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-content .flex {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .chart-container {
+                height: 300px;
+                padding: 15px;
+            }
+
+            .chart-small {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Table of Contents Sidebar -->
+    <nav class="toc-sidebar">
+        <div class="mb-8">
+            <h2 class="text-white text-xl font-bold serif mb-4">目录导航</h2>
+        </div>
+
+        <div class="space-y-1">
+            <a href="#hero" class="toc-item">概述</a>
+            <a href="#market-status" class="toc-item">市场现状与数据分析</a>
+            <a href="#trend-analysis" class="toc-item">发展趋势与用户分析</a>
+            <a href="#pain-points" class="toc-item">产业痛点分析</a>
+            <a href="#tech-innovation" class="toc-item">技术创新与数字化</a>
+            <a href="#brand-building" class="toc-item">品牌建设与营销</a>
+            <a href="#industry-integration" class="toc-item">产业融合与文旅</a>
+            <a href="#ai-integration" class="toc-item">AI产品价值嫁接</a>
+            <a href="#financial-forecast" class="toc-item">财务预测与商业模式</a>
+            <a href="#policy-recommendations" class="toc-item">政策建议与保障</a>
+            <a href="#vision" class="toc-item">共创愿景</a>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-white/20">
+            <p class="text-white/60 text-sm">基于AI赋能的产业升级路径研究</p>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section min-h-screen flex items-center">
+            <div class="hero-overlay"></div>
+            <div class="container mx-auto px-4 sm:px-6 md:px-8 py-20 hero-content">
+                <div class="bento-grid">
+                    <!-- Main Hero Content -->
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="serif text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+                                <span class="italic">东海水晶市场</span>
+                                <br/>
+                                <span class="text-blue-200">AI赋能转型升级</span>
+                            </h1>
+                            <p class="text-base md:text-xl lg:text-2xl text-blue-100 max-w-2xl leading-relaxed">
+                                基于大模型AI产品的产业价值嫁接与创新发展战略研究
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <div class="stat-highlight">
+                                <div class="text-2xl font-bold">460亿元</div>
+                                <div class="text-sm">2024年交易额</div>
+                            </div>
+                            <div class="stat-highlight">
+                                <div class="text-2xl font-bold">320亿元</div>
+                                <div class="text-sm">电商交易额</div>
+                            </div>
+                            <div class="stat-highlight">
+                                <div class="text-2xl font-bold">30万人</div>
+                                <div class="text-sm">从业人员</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side Content -->
+                    <div class="space-y-6">
+                        <div class="crystal-bg rounded-2xl p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-white">核心洞察</h3>
+                            <ul class="space-y-3 text-blue-100">
+                                <li class="flex items-start">
+                                    <i class="fas fa-gem mr-3 mt-1 text-blue-300"></i>
+                                    AI命理分析赋能个性化水晶推荐
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-network-wired mr-3 mt-1 text-blue-300"></i>
+                                    构建线上综合服务平台
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-heart mr-3 mt-1 text-blue-300"></i>
+                                    融合文旅与健康养生产业
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="crystal-bg rounded-2xl p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-white">战略重点</h3>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-200">70%</div>
+                                    <div class="text-sm text-blue-100">全国储量占比</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-blue-200">23.1%</div>
+                                    <div class="text-sm text-blue-100">电商增速</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Status Section -->
+        <section id="market-status" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            市场现状与数据分析
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            东海水晶市场作为全球重要集散地，拥有深厚产业基础和显著规模
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">📊 市场规模分布</h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="marketSizeChart"></canvas>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-4">
+                                数据来源：<a href="http://js.news.cn/20250507/c956017a41c841b4ba71dc6253c8017e/c.html" class="citation">[144]</a>
+                            </p>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">产业基础与规模</h3>
+
+                            <div class="space-y-6">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">水晶储量占比</span>
+                                    <span class="text-2xl font-bold text-blue-600">70%+</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">从业人员</span>
+                                    <span class="text-2xl font-bold text-blue-600">30万人</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">加工企业</span>
+                                    <span class="text-2xl font-bold text-blue-600">3000+家</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">2024年交易额</span>
+                                    <span class="text-2xl font-bold text-blue-600">460亿元</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card p-8 mb-12">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900">📈 五年发展趋势</h3>
+                        <div class="chart-container">
+                            <canvas id="trendChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="pull-quote">
+                        "东海水晶产业已从最初的原料开采和简单加工，逐步转型升级为集原石采购、创意设计、生产加工、收藏展示、市场营销、电商平台、物流运输于一体的完整产业链"
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trend Analysis Section -->
+        <section id="trend-analysis" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            发展趋势与用户分析
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            深度解析市场消费趋势和用户画像，为产业升级提供数据支撑
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">👥 用户画像分析</h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="userProfileChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">🔥 消费趋势特点</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-heart text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">颜值经济</h4>
+                                        <p class="text-sm text-gray-600">水晶成为年轻人潮流消费品</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-leaf text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">能量疗愈</h4>
+                                        <p class="text-sm text-gray-600">TikTok话题浏览量近40亿</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-video text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">直播电商</h4>
+                                        <p class="text-sm text-gray-600">5000多名专业主播</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                        <i class="fas fa-robot text-orange-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">数字玄学</h4>
+                                        <p class="text-sm text-gray-600">"赛博玄学"兴起成新潮流</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pain Points Section -->
+        <section id="pain-points" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            产业痛点分析
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            识别关键问题，为AI赋能转型找准切入点
+                        </p>
+                    </div>
+
+                    <div class="section-card p-8 mb-12">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900">🎯 痛点分析雷达图</h3>
+                        <div class="chart-container">
+                            <canvas id="painPointChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-4 text-red-600">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                市场信用体系
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 宝石命名不规范</li>
+                                <li>• 真假混合销售问题</li>
+                                <li>• 产品质量标准化困难</li>
+                            </ul>
+                            <p class="text-sm text-gray-500 mt-4">
+                                参考：<a href="https://www.scribd.com/document/830577795" class="citation">[1]</a>
+                            </p>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-4 text-orange-600">
+                                <i class="fas fa-industry mr-2"></i>
+                                产业升级瓶颈
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 重生产轻销售现象普遍</li>
+                                <li>• 本地品牌影响力不足</li>
+                                <li>• 产品附加值有待提升</li>
+                            </ul>
+                            <p class="text-sm text-gray-500 mt-4">
+                                参考：<a href="https://www.lyg.gov.cn/zglygzfmhwz/gcyw/content/fd3dda06-540f-4e10-bf19-eaaf07aa7a90.html" class="citation">[15]</a>
+                            </p>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-4 text-purple-600">
+                                <i class="fas fa-tags mr-2"></i>
+                                品牌缺失
+                            </h3>
+                            <p class="text-gray-600">缺乏全国影响力的水晶品牌，多以作坊式中小商户为主</p>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-4 text-blue-600">
+                                <i class="fas fa-cogs mr-2"></i>
+                                服务欠缺
+                            </h3>
+                            <p class="text-gray-600">缺乏深度文化包装和增值服务，产品同质化严重</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Innovation Section -->
+        <section id="tech-innovation" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            技术创新与数字化应用
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            通过AI技术赋能，推动东海水晶产业向智能化、个性化、高端化方向升级发展
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">🧠 AI核心能力评估</h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="aiCapabilityChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">☯️ 五行能量分析示例</h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="wuxingRadarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                        <div class="section-card p-8">
+                            <div class="text-center mb-6">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-robot text-2xl text-blue-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">AI辅助设计</h3>
+                            </div>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    基于用户偏好推荐水晶款式
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    命理五行分析个性化定制
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    传统文化元素创新设计
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <div class="text-center mb-6">
+                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-globe text-2xl text-purple-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">线上服务平台</h3>
+                            </div>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    一站式交易与咨询服务
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    智能供应链管理
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    跨境电商集成服务
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <div class="text-center mb-6">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-cogs text-2xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">产业链智能化</h3>
+                            </div>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    原石采购决策支持
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    加工制造优化
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mr-3 mt-1"></i>
+                                    智能质量检测
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section-card p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900">🔄 服务转化流程分析</h3>
+                        <div class="chart-container">
+                            <canvas id="conversionFunnelChart"></canvas>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">
+                            基于AI命理服务的用户转化漏斗分析，显示从访问到购买的完整路径
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Building Section -->
+        <section id="brand-building" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            品牌建设与营销推广
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            打造"AI+水晶"特色品牌形象，利用AI进行精准营销与内容创作，拓展社交媒体影响力
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">📊 品牌内容策略分布</h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="brandStrategyChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">💡 品牌理念</h3>
+                            <div class="space-y-4">
+                                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-2">"AI赋能，晶选人生"</h4>
+                                    <p class="text-sm text-gray-600">将AI的精准分析与水晶的天然能量相结合</p>
+                                </div>
+                                <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">"智慧水晶，专属守护"</h4>
+                                    <p class="text-sm text-gray-600">具有科技感和人文关怀的品牌形象</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-bullseye mr-2 text-red-500"></i>
+                                精准营销策略
+                            </h3>
+
+                            <div class="space-y-4">
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">用户画像构建</h4>
+                                    <p class="text-sm text-gray-600">基于生辰八字、五行属性、兴趣爱好、消费习惯等多维度数据</p>
+                                </div>
+
+                                <div class="bg-orange-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-orange-800 mb-2">定制化推荐</h4>
+                                    <p class="text-sm text-gray-600">对运势不佳用户推送转运水晶，对关注健康用户推荐疗愈水晶</p>
+                                </div>
+
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-2">内容自动化</h4>
+                                    <p class="text-sm text-gray-600">AI辅助生成营销文案、社交媒体内容、短视频脚本</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-share-alt mr-2 text-blue-500"></i>
+                                社交媒体拓展
+                            </h3>
+
+                            <div class="space-y-4">
+                                <div class="bg-pink-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-pink-800 mb-2">话题策划</h4>
+                                    <p class="text-sm text-gray-600">发起"我的AI幸运水晶"话题挑战赛，邀请用户分享体验</p>
+                                </div>
+
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">KOL合作</h4>
+                                    <p class="text-sm text-gray-600">与命理博主、星座达人、生活方式KOL合作测评推荐</p>
+                                </div>
+
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">国际影响力</h4>
+                                    <p class="text-sm text-gray-600">抖音国际版水晶话题浏览量近40亿次，拓展海外市场</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Integration Section -->
+        <section id="industry-integration" class="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            产业融合与文旅发展
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            开发"AI+水晶+文旅"融合产品，打造沉浸式文化体验，推动跨界产业发展
+                        </p>
+                    </div>
+
+                    <div class="section-card p-8 mb-12">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900">文旅融合产品开发</h3>
+
+                        <div class="grid lg:grid-cols-3 gap-8">
+                            <div class="text-center">
+                                <img src="https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="游客在水晶博物馆体验AI互动展示" class="w-full h-48 object-cover rounded-lg mb-4"/>
+                                <h4 class="font-semibold text-lg mb-3 text-blue-600">"AI命理探晶之旅"</h4>
+                                <p class="text-sm text-gray-600">
+                                    结合水晶博物馆参观、AI命理分析、个性化水晶挑选的深度体验
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="VR水晶能量探索体验馆" class="w-full h-48 object-cover rounded-lg mb-4"/>
+                                <h4 class="font-semibold text-lg mb-3 text-purple-600">沉浸式体验馆</h4>
+                                <p class="text-sm text-gray-600">
+                                    利用VR/AR技术打造"AI水晶能量探索馆"，提供虚拟能量世界体验
+                                </p>
+                            </div>
+
+                            <div class="text-center">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="水晶疗愈温泉SPA场景" class="w-full h-48 object-cover rounded-lg mb-4"/>
+                                <h4 class="font-semibold text-lg mb-3 text-green-600">健康养生产品</h4>
+                                <p class="text-sm text-gray-600">
+                                    开发"水晶能量SPA"、"五行水晶疗愈课程"等高端养生项目
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-6 text-gray-900">产业融合方向</h3>
+
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-heartbeat text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-2">健康养生产业</h4>
+                                        <p class="text-sm text-gray-600">
+                                            基于AI分析推荐具有特定疗愈功能的水晶，结合温泉资源开发高端养生项目
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-tshirt text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-2">时尚产业</h4>
+                                        <p class="text-sm text-gray-600">
+                                            AI辅助设计"开运珠宝"系列，结合流行色和五行趋势进行创新设计
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-dna text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900 mb-2">生物科技</h4>
+                                        <p class="text-sm text-gray-600">
+                                            研发含有水晶精华的护肤品、保健品，通过AI进行精准用户匹配
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-xl font-bold mb-6 text-gray-900">互动体验创新</h3>
+
+                            <div class="space-y-4">
+                                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-2">AR导览应用</h4>
+                                    <p class="text-sm text-gray-600">
+                                        扫描水晶后AI实时解读能量信息、文化寓意，叠加虚拟五行能量场效果
+                                    </p>
+                                </div>
+
+                                <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">个性化故事演绎</h4>
+                                    <p class="text-sm text-gray-600">
+                                        根据AI命理分析生成"水晶守护神"故事，通过动画、游戏形式呈现
+                                    </p>
+                                </div>
+
+                                <div class="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">网红直播体验</h4>
+                                    <p class="text-sm text-gray-600">
+                                        在AI体验馆进行直播，体验AI算命、VR探晶等新奇项目
+                                    </p>
+                                    <p class="text-xs text-gray-500 mt-1">
+                                        参考：<a href="http://wglj.lyg.gov.cn/lygswgxj/xqzx/content/26dbd4bc-2a34-4284-9a0b-b6658cd96c98.html" class="citation">[19]</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Integration Section -->
+        <section id="ai-integration" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            AI产品价值嫁接策略
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            基于大模型AI产品的核心功能，与东海水晶市场深度融合，创造独特竞争优势
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-yin-yang mr-2 text-blue-600"></i>
+                                五行水晶匹配分析
+                            </h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="wuxingMatchingChart"></canvas>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-semibold text-gray-900 mb-3">五行水晶对应表</h4>
+                                <div class="grid grid-cols-2 gap-3 text-sm">
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-gray-300 rounded mr-2"></div>
+                                        <span>金：白水晶、钛晶</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-blue-300 rounded mr-2"></div>
+                                        <span>水：海蓝宝、黑曜石</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-green-300 rounded mr-2"></div>
+                                        <span>木：绿幽灵、孔雀石</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-red-300 rounded mr-2"></div>
+                                        <span>火：红纹石、石榴石</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <div class="w-4 h-4 bg-yellow-300 rounded mr-2"></div>
+                                        <span>土：黄水晶、虎眼石</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-compass mr-2 text-purple-600"></i>
+                                风水布局分析
+                            </h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="fengShuiLayoutChart"></canvas>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-semibold text-gray-900 mb-3">风水布局套装</h4>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li>💰 财位：黄水晶球催旺财运</li>
+                                    <li>💕 桃花位：粉水晶增进人缘</li>
+                                    <li>🛡️ 煞位：黑曜石葫芦化煞</li>
+                                    <li>📚 文昌位：紫水晶提升学业</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900">价值嫁接路径图</h3>
+                        <div class="mermaid-container">
+                            <div class="mermaid-controls">
+                                <button class="mermaid-control-btn zoom-in" title="放大">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                                <button class="mermaid-control-btn zoom-out" title="缩小">
+                                    <i class="fas fa-search-minus"></i>
+                                </button>
+                                <button class="mermaid-control-btn reset-zoom" title="重置">
+                                    <i class="fas fa-expand-arrows-alt"></i>
+                                </button>
+                            </div>
+                            <div class="mermaid" id="value-graph">
+                                graph TD
+                                A["AI产品核心功能"] --> B["命理五行分析"]
+                                A --> C["风水分析"]
+                                A --> D["疗愈建议"]
+                                A --> E["生物科技嫁接"]
+
+                                B --> F["五行水晶匹配"]
+                                C --> G["能量场布局"]
+                                D --> H["个性化疗愈"]
+                                E --> I["高科技产品"]
+
+                                F --> J["专属水晶推荐"]
+                                G --> K["风水布局套装"]
+                                H --> L["疗愈方案包"]
+                                I --> M["生物科技产品"]
+
+                                J --> N["市场差异化"]
+                                K --> N
+                                L --> N
+                                M --> N
+
+                                N --> O["产业升级"]
+                                O --> P["价值提升"]
+
+                                style A fill:#dbeafe,stroke:#1e40af,stroke-width:2px,color:#1f2937
+                                style N fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#1f2937
+                                style O fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#1f2937
+                                style P fill:#f3e8ff,stroke:#7c3aed,stroke-width:2px,color:#1f2937
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Forecast Section -->
+        <section id="financial-forecast" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            财务预测与商业模式
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            基于市场分析和技术能力，构建可持续的商业模式和盈利预测
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">💼 商业模式分布</h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="businessModelChart"></canvas>
+                            </div>
+                            <div class="mt-4">
+                                <table class="w-full text-sm">
+                                    <thead>
+                                        <tr class="bg-gray-50">
+                                            <th class="text-left p-2">模式</th>
+                                            <th class="text-left p-2">收费方式</th>
+                                            <th class="text-left p-2">预期占比</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-b">
+                                            <td class="p-2">SaaS服务</td>
+                                            <td class="p-2">按年订阅</td>
+                                            <td class="p-2 font-semibold text-blue-600">40%</td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="p-2">B2B2C分成</td>
+                                            <td class="p-2">销售分成</td>
+                                            <td class="p-2 font-semibold text-purple-600">35%</td>
+                                        </tr>
+                                        <tr class="border-b">
+                                            <td class="p-2">数据增值</td>
+                                            <td class="p-2">咨询费用</td>
+                                            <td class="p-2 font-semibold text-pink-600">15%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-2">IP变现</td>
+                                            <td class="p-2">授权费用</td>
+                                            <td class="p-2 font-semibold text-red-600">10%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">📈 三年营收预测</h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card p-8 mb-12">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-900">👥 用户增长预测</h3>
+                        <div class="chart-container">
+                            <canvas id="userGrowthChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-4 gap-6">
+                        <div class="stat-highlight">
+                            <div class="text-2xl font-bold">18个月</div>
+                            <div class="text-sm">投资回收期</div>
+                        </div>
+                        <div class="stat-highlight">
+                            <div class="text-2xl font-bold">45%</div>
+                            <div class="text-sm">内部收益率</div>
+                        </div>
+                        <div class="stat-highlight">
+                            <div class="text-2xl font-bold">180%</div>
+                            <div class="text-sm">3年投资回报率</div>
+                        </div>
+                        <div class="stat-highlight">
+                            <div class="text-2xl font-bold">1000万</div>
+                            <div class="text-sm">第二年营收目标</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Recommendations Section -->
+        <section id="policy-recommendations" class="py-20 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="serif text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                            政策建议与保障措施
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            构建完善的支撑体系，为AI赋能东海水晶产业发展提供政策保障和环境支持
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-handshake mr-2 text-green-600"></i>
+                                协同创新平台评估
+                            </h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="collaborationPlatformChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-shield-alt mr-2 text-red-600"></i>
+                                发展环境优化
+                            </h3>
+                            <div class="chart-container chart-small">
+                                <canvas id="environmentOptimizationChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-sitemap mr-2 text-blue-600"></i>
+                                顶层设计与政策引导
+                            </h3>
+
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-800 mb-2">发展规划制定</h4>
+                                    <p class="text-sm text-gray-600">
+                                        将AI技术应用纳入东海水晶产业发展整体战略，明确发展目标和实施路径
+                                    </p>
+                                </div>
+
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">扶持政策</h4>
+                                    <p class="text-sm text-gray-600">
+                                        设立AI赋能专项资金，对符合条件的项目给予补贴或税收优惠
+                                    </p>
+                                </div>
+
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">标准规范</h4>
+                                    <p class="text-sm text-gray-600">
+                                        制定AI技术应用标准和伦理准则，营造公平有序的市场环境
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-card p-8">
+                            <h3 class="text-2xl font-bold mb-6 text-gray-900">
+                                <i class="fas fa-graduation-cap mr-2 text-purple-600"></i>
+                                人才培养与引进
+                            </h3>
+
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="font-semibold text-purple-800 mb-3">本土人才培养</h4>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                            开设水晶设计、AI技术、数字营销相关专业课程
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                            建立校企合作实习实训基地
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                            加强现有从业人员AI技能培训
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-blue-800 mb-3">高端人才引进</h4>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                            引进国内外AI和水晶产业领军人才
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                            提供安家补贴、科研经费等优惠政策
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                                            建立柔性引进机制，吸引外部智力资源
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="section-card p-8 text-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-rocket text-2xl text-blue-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2">短期目标</h4>
+                            <p class="text-sm text-gray-600">建立AI应用试点，完善基础设施建设</p>
+                        </div>
+
+                        <div class="section-card p-8 text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chart-line text-2xl text-green-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2">中期目标</h4>
+                            <p class="text-sm text-gray-600">形成产业链协同，提升品牌影响力</p>
+                        </div>
+
+                        <div class="section-card p-8 text-center">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-trophy text-2xl text-purple-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-2">长期愿景</h4>
+                            <p class="text-sm text-gray-600">建成世界级水晶产业创新中心</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section id="vision" class="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white text-center">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="serif text-5xl lg:text-6xl font-bold mb-8">共创愿景</h2>
+                    <div class="text-xl lg:text-2xl mb-12 leading-relaxed">
+                        数字玄学遇上水晶产业<br>
+                        传统文化与现代科技交相辉映
+                    </div>
+                    <p class="text-lg lg:text-xl mb-12 leading-relaxed opacity-90">
+                        诚邀东海政府与各界伙伴携手合作<br>
+                        共同打造全国首个"数字玄学+水晶产业"融合发展示范样板
+                    </p>
+                    <div class="text-2xl lg:text-3xl font-bold mb-8 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                        共谱"晶"彩，创赢未来！
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8 mt-16">
+                        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6">
+                            <div class="text-4xl mb-4">🤝</div>
+                            <h3 class="text-xl font-semibold mb-3">政企合作</h3>
+                            <p class="text-sm opacity-80">政府引导，企业主导，共建产业生态</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6">
+                            <div class="text-4xl mb-4">🚀</div>
+                            <h3 class="text-xl font-semibold mb-3">科技创新</h3>
+                            <p class="text-sm opacity-80">AI技术赋能，传统产业数字化转型</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6">
+                            <div class="text-4xl mb-4">🌍</div>
+                            <h3 class="text-xl font-semibold mb-3">文化出海</h3>
+                            <p class="text-sm opacity-80">东方文化与现代科技融合走向世界</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="serif text-2xl font-bold mb-4">东海水晶市场发展调研报告</h3>
+                    <p class="text-gray-400 mb-6">
+                        基于AI赋能的产业升级路径研究 · 创造独特竞争优势
+                    </p>
+                    <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                        <span>数据来源：新华网、人民网、政府官网等权威渠道</span>
+                        <span>|</span>
+                        <span>报告日期：2025年7月</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#f8fafc',
+                primaryTextColor: '#1f2937',
+                primaryBorderColor: '#1e3a8a',
+                lineColor: '#6b7280',
+                secondaryColor: '#f3e8ff',
+                tertiaryColor: '#fef3c7',
+                background: '#ffffff',
+                mainBkg: '#f8fafc',
+                secondBkg: '#f3e8ff',
+                tertiaryBkg: '#fef3c7',
+                nodeBorder: '#1e3a8a',
+                clusterBkg: '#f9fafb',
+                clusterBorder: '#d1d5db',
+                defaultLinkColor: '#6b7280',
+                titleColor: '#1f2937',
+                edgeLabelBackground: '#ffffff',
+                nodeTextColor: '#1f2937'
+            },
+            flowchart: {
+                nodeSpacing: 60,
+                rankSpacing: 100,
+                curve: 'basis',
+                padding: 20,
+                useMaxWidth: true,
+                htmlLabels: true
+            },
+            fontSize: 14,
+            fontFamily: 'Inter, sans-serif'
+        });
+
+        // Chart.js configurations
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        };
+
+        // 市场规模图表
+        const marketCtx = document.getElementById('marketSizeChart').getContext('2d');
+        new Chart(marketCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['电商交易', '线下交易', '跨境电商'],
+                datasets: [{
+                    data: [320, 140, 50],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb']
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '2024年交易额分布（亿元）'
+                    }
+                }
+            }
+        });
+
+        // 趋势分析图表
+        const trendCtx = document.getElementById('trendChart').getContext('2d');
+        new Chart(trendCtx, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: '总交易额(亿元)',
+                    data: [280, 320, 360, 400, 460],
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    fill: true
+                }, {
+                    label: '电商占比(%)',
+                    data: [45, 55, 62, 68, 70],
+                    borderColor: '#764ba2',
+                    backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                ...chartOptions,
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        grid: {
+                            drawOnChartArea: false,
+                        },
+                    }
+                }
+            }
+        });
+
+        // 用户画像图表
+        const userCtx = document.getElementById('userProfileChart').getContext('2d');
+        new Chart(userCtx, {
+            type: 'bar',
+            data: {
+                labels: ['18-25岁', '26-30岁', '31-35岁', '36-40岁', '40岁以上'],
+                datasets: [{
+                    label: '用户占比(%)',
+                    data: [35, 38, 20, 5, 2],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4ecdc4']
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '水晶消费用户年龄分布'
+                    }
+                }
+            }
+        });
+
+        // 痛点分析图表
+        const painCtx = document.getElementById('painPointChart').getContext('2d');
+        new Chart(painCtx, {
+            type: 'radar',
+            data: {
+                labels: ['品牌影响力', '产品创新度', '服务完善度', '附加值水平', '数字化程度'],
+                datasets: [{
+                    label: '当前水平',
+                    data: [3, 4, 3, 4, 5],
+                    borderColor: '#f5576c',
+                    backgroundColor: 'rgba(245, 87, 108, 0.2)'
+                }, {
+                    label: '目标水平',
+                    data: [9, 8, 9, 8, 9],
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.2)'
+                }]
+            },
+            options: {
+                ...chartOptions,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
+
+        // AI能力图表
+        const aiCtx = document.getElementById('aiCapabilityChart').getContext('2d');
+        new Chart(aiCtx, {
+            type: 'polarArea',
+            data: {
+                labels: ['命理分析', '五行匹配', '风水指导', '疗愈建议', '产品推荐'],
+                datasets: [{
+                    data: [95, 90, 85, 88, 92],
+                    backgroundColor: [
+                        'rgba(102, 126, 234, 0.8)',
+                        'rgba(118, 75, 162, 0.8)',
+                        'rgba(240, 147, 251, 0.8)',
+                        'rgba(245, 87, 108, 0.8)',
+                        'rgba(78, 205, 196, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: 'AI能力评估分数'
+                    }
+                }
+            }
+        });
+
+        // 五行雷达图
+        const wuxingCtx = document.getElementById('wuxingRadarChart').getContext('2d');
+        new Chart(wuxingCtx, {
+            type: 'radar',
+            data: {
+                labels: ['金', '木', '水', '火', '土'],
+                datasets: [{
+                    label: '用户A五行属性',
+                    data: [7, 3, 8, 5, 6],
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.3)'
+                }, {
+                    label: '理想平衡状态',
+                    data: [6, 6, 6, 6, 6],
+                    borderColor: '#764ba2',
+                    backgroundColor: 'rgba(118, 75, 162, 0.1)'
+                }]
+            },
+            options: {
+                ...chartOptions,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
+
+        // 转化漏斗图表
+        const funnelCtx = document.getElementById('conversionFunnelChart').getContext('2d');
+        new Chart(funnelCtx, {
+            type: 'bar',
+            data: {
+                labels: ['访问用户', '注册用户', '使用服务', '查看推荐', '完成购买'],
+                datasets: [{
+                    label: '用户数量',
+                    data: [10000, 6000, 4500, 2700, 1350],
+                    backgroundColor: [
+                        'rgba(102, 126, 234, 0.8)',
+                        'rgba(118, 75, 162, 0.8)',
+                        'rgba(240, 147, 251, 0.8)',
+                        'rgba(245, 87, 108, 0.8)',
+                        'rgba(78, 205, 196, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '服务转化漏斗分析'
+                    }
+                }
+            }
+        });
+
+        // 品牌策略图表
+        const brandStrategyCtx = document.getElementById('brandStrategyChart').getContext('2d');
+        new Chart(brandStrategyCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['故事性内容', '视觉识别', '情感连接', '社交传播'],
+                datasets: [{
+                    data: [30, 25, 25, 20],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb', '#f5576c']
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '品牌内容策略分布'
+                    }
+                }
+            }
+        });
+
+        // 五行匹配图表
+        const wuxingMatchingCtx = document.getElementById('wuxingMatchingChart').getContext('2d');
+        new Chart(wuxingMatchingCtx, {
+            type: 'polarArea',
+            data: {
+                labels: ['金系水晶', '木系水晶', '水系水晶', '火系水晶', '土系水晶'],
+                datasets: [{
+                    data: [18, 22, 20, 19, 21],
+                    backgroundColor: [
+                        'rgba(209, 213, 219, 0.8)',
+                        'rgba(34, 197, 94, 0.8)',
+                        'rgba(59, 130, 246, 0.8)',
+                        'rgba(239, 68, 68, 0.8)',
+                        'rgba(245, 158, 11, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '五行水晶产品分布'
+                    }
+                }
+            }
+        });
+
+        // 风水布局图表
+        const fengShuiCtx = document.getElementById('fengShuiLayoutChart').getContext('2d');
+        new Chart(fengShuiCtx, {
+            type: 'bar',
+            data: {
+                labels: ['财位布局', '桃花位', '化煞位', '文昌位', '健康位'],
+                datasets: [{
+                    label: '使用频率(%)',
+                    data: [35, 25, 20, 15, 5],
+                    backgroundColor: [
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(236, 72, 153, 0.8)',
+                        'rgba(75, 85, 99, 0.8)',
+                        'rgba(147, 51, 234, 0.8)',
+                        'rgba(34, 197, 94, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '风水布局需求分析'
+                    }
+                }
+            }
+        });
+
+        // 商业模式图表
+        const businessCtx = document.getElementById('businessModelChart').getContext('2d');
+        new Chart(businessCtx, {
+            type: 'pie',
+            data: {
+                labels: ['SaaS服务', 'B2B2C分成', '数据增值', 'IP变现'],
+                datasets: [{
+                    data: [40, 35, 15, 10],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb', '#f5576c']
+                }]
+            },
+            options: {
+                ...chartOptions,
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '收入模式占比分布'
+                    }
+                }
+            }
+        });
+
+        // 营收预测图表
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['第一年', '第二年', '第三年'],
+                datasets: [{
+                    label: '营业收入(万元)',
+                    data: [300, 1000, 2500],
+                    backgroundColor: '#667eea'
+                }, {
+                    label: '净利润(万元)',
+                    data: [0, 200, 625],
+                    backgroundColor: '#764ba2'
+                }]
+            },
+            options: chartOptions
+        });
+
+        // 用户增长图表
+        const userGrowthCtx = document.getElementById('userGrowthChart').getContext('2d');
+        new Chart(userGrowthCtx, {
+            type: 'line',
+            data: {
+                labels: ['第一年', '第二年', '第三年'],
+                datasets: [{
+                    label: '注册用户(万人)',
+                    data: [5, 20, 50],
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    fill: true
+                }, {
+                    label: '付费用户(千人)',
+                    data: [5, 20, 50],
+                    borderColor: '#764ba2',
+                    backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                    fill: true
+                }]
+            },
+            options: chartOptions
+        });
+
+        // 协同平台图表
+        const collaborationCtx = document.getElementById('collaborationPlatformChart').getContext('2d');
+        new Chart(collaborationCtx, {
+            type: 'radar',
+            data: {
+                labels: ['政府支持', '企业参与', '高校合作', '科研院所', '用户反馈'],
+                datasets: [{
+                    label: '协同度评分',
+                    data: [8, 7, 6, 7, 8],
+                    borderColor: '#16a34a',
+                    backgroundColor: 'rgba(22, 163, 74, 0.3)'
+                }]
+            },
+            options: {
+                ...chartOptions,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
+
+        // 环境优化图表
+        const environmentCtx = document.getElementById('environmentOptimizationChart').getContext('2d');
+        new Chart(environmentCtx, {
+            type: 'bar',
+            data: {
+                labels: ['政务服务', '知识产权', '市场监管', '金融服务'],
+                datasets: [{
+                    label: '优化程度',
+                    data: [85, 80, 75, 70],
+                    backgroundColor: [
+                        'rgba(239, 68, 68, 0.8)',
+                        'rgba(59, 130, 246, 0.8)',
+                        'rgba(34, 197, 94, 0.8)',
+                        'rgba(147, 51, 234, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                ...chartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                },
+                plugins: {
+                    ...chartOptions.plugins,
+                    title: {
+                        display: true,
+                        text: '发展环境优化水平(%)'
+                    }
+                }
+            }
+        });
+
+        // Initialize Mermaid Controls
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+                const mermaidElement = container.querySelector('.mermaid');
+                let scale = 1;
+                let isDragging = false;
+                let startX, startY, translateX = 0, translateY = 0;
+
+                function updateTransform() {
+                    mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+                    mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+                }
+
+                const zoomInBtn = container.querySelector('.zoom-in');
+                const zoomOutBtn = container.querySelector('.zoom-out');
+                const resetBtn = container.querySelector('.reset-zoom');
+
+                if (zoomInBtn) {
+                    zoomInBtn.addEventListener('click', () => {
+                        scale = Math.min(scale * 1.25, 4);
+                        updateTransform();
+                    });
+                }
+
+                if (zoomOutBtn) {
+                    zoomOutBtn.addEventListener('click', () => {
+                        scale = Math.max(scale / 1.25, 0.3);
+                        if (scale <= 1) {
+                            translateX = 0;
+                            translateY = 0;
+                        }
+                        updateTransform();
+                    });
+                }
+
+                if (resetBtn) {
+                    resetBtn.addEventListener('click', () => {
+                        scale = 1;
+                        translateX = 0;
+                        translateY = 0;
+                        updateTransform();
+                    });
+                }
+
+                // Mouse Events
+                mermaidElement.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startX = e.clientX - translateX;
+                    startY = e.clientY - translateY;
+                    updateTransform();
+                    e.preventDefault();
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (isDragging) {
+                        translateX = e.clientX - startX;
+                        translateY = e.clientY - startY;
+                        updateTransform();
+                    }
+                });
+
+                document.addEventListener('mouseup', () => {
+                    if (isDragging) {
+                        isDragging = false;
+                        updateTransform();
+                    }
+                });
+
+                // Wheel zoom
+                container.addEventListener('wheel', (e) => {
+                    e.preventDefault();
+                    const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                    const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                    if (newScale !== scale) {
+                        const scaleDiff = newScale / scale;
+                        translateX = translateX * scaleDiff;
+                        translateY = translateY * scaleDiff;
+                        scale = newScale;
+
+                        if (scale <= 1) {
+                            translateX = 0;
+                            translateY = 0;
+                        }
+
+                        updateTransform();
+                    }
+                });
+
+                updateTransform();
+            });
+        }
+
+        // Navigation and scroll handling
+        document.querySelectorAll('.toc-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.toc-item');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMermaidControls();
+        });
+    </script>
+</body>
+</html>
